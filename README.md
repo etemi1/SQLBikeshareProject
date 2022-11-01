@@ -34,10 +34,9 @@ You will produce a report with the following deliverables:
 6. Your top three recommendations based on your analysis
 Use the following Case Study Roadmap as a guide. Note: Completing this case study within a week is a good goal.
 
-# It's Worthy to Note that i have already solve this project with Power BI, so here is me also solving it with SQL but data from a different data source KAGGLE
+#### It's Worthy to Note that i have already solved this project with Power BI , so this is me also solving it with SQL but data from a different data source KAGGLE
 
-First, I created the table so i can import my data into it
- CREATE TABLE Bikeshareproject
+	-- CREATE TABLE Bikeshareproject
 (
     ride_id varchar,
     rideable_type varchar,
@@ -57,7 +56,7 @@ First, I created the table so i can import my data into it
 	ALTER TABLE bikeshareproject
 ADD COLUMN end_lng fLoat
 
---- I removed unecessary columns from each table
+		--- I removed unecessary columns from each table
 ALTER TABLE feb
  DROP COLUMN ride_id,
  drop column start_station_id,
