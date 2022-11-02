@@ -194,3 +194,13 @@ group by start_station_name , start_day,rideable_type
 order by total_ride desc
 
 __ I created an extension so i can crosstab function and pass the query as string in it, so that casual and paid members can be pivoted as column on their own. 
+--- with this query i compared the rides taken by casual and annual members
+select *
+from crosstab('select extract(hour from started_at) as time_of_rides,member_casual,count(rideable_type) as total_trips
+from cyclistic
+group by member_casual, time_of_rides
+order by 1 desc',
+         'values (''member''),(''casual'')')
+as result (time_of_rides numeric, member varchar, casual varchar)
+order by time_of_rides desc, member desc, casual desc
+
