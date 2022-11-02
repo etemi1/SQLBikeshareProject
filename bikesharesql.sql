@@ -192,3 +192,5 @@ from cyclistic
 where member_casual = 'casual' 
 group by start_station_name , start_day,rideable_type
 order by total_ride desc
+
+__ I created an extension so i can crosstab function and pass the query as string in it, so that casual and paid members can be pivoted as column on their own. 
